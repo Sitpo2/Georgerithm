@@ -1,3 +1,4 @@
+
 package SEWA_1954_snail;
 
 public class practice {
@@ -7,12 +8,16 @@ public class practice {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int nowR = 0;
-		int nowC;
-		int nextR;
-		int nextC;
+		int T = sc.nextInt();
 		
-		for (int n =0; n < N; n++) {
+		int nowR = 0; //초기값 설정(0,0)
+		int nowC = 0;
+		int dir = 0; // 방향 인덱스 설정(오른쪽 먼저 시작)
+		
+		for (int n =1; n<=T*T; n++) {
+			
+			
+			
 			
 		
 			for (int i = 0; i < 4; i++) {

@@ -5,34 +5,40 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Solution {
-
+	
+	//변화값 주기
+	static int [] dr = {0, 1, 0, -1}; //right, down, left, up
+	static int [] dc = {1, 0, -1, 0}; //right, down, left, up
+	
 	public static void main(String[] args) throws FileNotFoundException {
 		File file = new File("./src/SEWA_1954_snail/snail.txt");
 		Scanner sc = new Scanner(file);
 		
-		//Test case 출력
-		int T;
-		T = sc.nextInt();
+		int T = sc.nextInt();
 		
-		//2차 배열 정의 - T
-		int [][] arr = new int [T][T];	
+		//현재 위치, 미래 위치 기록
+		int nowR = 0; //초기값 설정(0,0)
+		int nowC = 0;
+		int dir = 0; //방향 설정
+		
+		//배열 생성
+		int [][] arr = new int[T][T];
 		int N = arr.length;
 		
-		
-		//델타 탐색 위한 것(오른쪽0, 아래1, 왼쪽2, 위3)
-		int [] dr = {0, 1, 0, -1}; //행변화 
-		int [] dc = {1, 0, -1, 0}; //열변화
-		
-		//방향 인덱스 값 및 현재 값 설정(0,0)
-		int dir = 0;
-		int r = 0; 
-		int c = 0;
-		
-		
-		
+		//각 칸마다 1씩 증가하도록 설정(1부터)
+		for(int n = 1; n<T*T; n++) {
+			arr[nowR][nowC] = n;
 			
+			int nextR = nowR + dr[dir];
+			int nextC = nowC + dc[dir];
+		}
+			nowR = nextR;
+			
+		
+			}
+
 		}
 		
 	}
 
-
+	}
