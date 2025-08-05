@@ -1,0 +1,22 @@
+package SEWA_1984;
+
+import java.util.Scanner;
+
+public class Mid_Number2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int T;
+		T = sc.nextInt();
+		
+		//#작성하는 거
+		for(int C = 1; C<=T; C++) {
+			
+			//배열 정의
+			int[] arr = new int [10];
+		}
+
+	}
+
+}

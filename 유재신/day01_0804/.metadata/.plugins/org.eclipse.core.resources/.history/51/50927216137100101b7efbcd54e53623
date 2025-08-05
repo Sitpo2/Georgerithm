@@ -1,0 +1,29 @@
+package SEWA_1984;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+public class Mid_Number2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int T;
+		T = sc.nextInt();
+		
+		//#작성하는 거
+		for(int C = 1; C<=T; C++) {
+			
+			//배열 정의
+			int[] arr = new int [10];
+			int N = arr.length;
+			//배열의 0번째부터 9번째까지 반복하는 것
+			for(int i =0; i<N; i++) {
+				arr[i] = sc.nextInt();
+			}
+			
+			}
+		System.out.println();Arrays.sort(arr[i]);
+}
+}

@@ -1,0 +1,15 @@
+package SEWA_2068;
+
+import java.util.Scanner;
+
+public class Max_Number2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		// # 관련되서 풀기 위해 입력
+		int T;
+		T = sc.nextInt();
+	}
+
+}
