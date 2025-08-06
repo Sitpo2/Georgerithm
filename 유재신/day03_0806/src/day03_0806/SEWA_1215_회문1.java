@@ -56,8 +56,8 @@ public class SEWA_1215_회문1 {
 					break;
 				}
 			} 
-			if (found2)
-				cnt ++;
+			{if (found2)
+				cnt ++;}
 			}
 		}
 				
