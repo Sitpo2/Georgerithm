@@ -9,11 +9,11 @@ public class Test2 {
 		// toCharArrayList
 		//출력할 때
 		
-		int [] arr = new int[10];
+		int [] arr = {1, 2, 3, 4, 5, 6};
 		// System.out.println(arr); 
 		//System.out.println(Arrays.toString(arr));
 		Arrays.toString(arr);
-		
+		System.out.println(Arrays.toString(arr));
 		
 		String str = "abcde";
 		str.charAt(0);

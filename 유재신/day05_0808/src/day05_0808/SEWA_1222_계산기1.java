@@ -38,7 +38,8 @@ public class SEWA_1222_계산기1 {
 				char tmp = st.charAt(i);
 				
 				//비연산자이면 sb에 추가하기
-				if (tmp>='0' && tmp<='9') {
+				 //if (tmp>='0' && tmp<='9') {
+				if(Character.isDigit(tmp)) {
 					sb.append(tmp);
 				} 
 				//여는 괄호이면 넣기

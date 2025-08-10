@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class SEWA_1222_계산기2 {
+public class SEWA_1222_계산기1_3 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
