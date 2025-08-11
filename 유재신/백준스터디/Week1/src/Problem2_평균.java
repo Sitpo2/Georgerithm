@@ -21,11 +21,10 @@ public class Problem2_평균 {
 		int M = arr[n-1];
 		
 		for(int j = 0; j<n; j++) {
-			sum += arr[j];
+			sum += arr[j]/M*100;
 		}
-		double result = sum/M*100;
 		
-		System.out.println(result/n);
+		System.out.println(sum/n);
 
 	}
 
