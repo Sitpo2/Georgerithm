@@ -11,7 +11,7 @@ public class SEWA_21936_길이가M인회문찾기 {
 		//테스트케이스 찾기
 		int tc = sc.nextInt();
 		
-		for(int t = 0; t<=tc; t++) {
+		for(int t = 1; t<=tc; t++) {
 			//문자길이 5
 			int N = sc.nextInt();
 			//회문길이 3
@@ -19,19 +19,20 @@ public class SEWA_21936_길이가M인회문찾기 {
 			//문자열 입력
 			String line = sc.next();
 			
-			boolean isOk = true;
-			for(int i = 0; i<N-M; i++) {			
-			String tmp = line.substring(i, i+M);
-			StringBuilder sb = new StringBuilder(tmp).reverse();
-			if(tmp.equals(sb.toString())) {
-				isOk = false;
-				System.out.println("#" + t+ " " + tmp);
-			} 
-		}
-			if (isOk) {
-				System.out.println("#" + t+ " " + "NONE");
+				boolean isOk = true; //회문을 찾지 못했다.
+				for(int i = 0; i<=N-M; i++) {			
+				String tmp = line.substring(i, i+M); //0부터 2까지 세글자
+				StringBuilder sb = new StringBuilder(tmp).reverse(); //sb는 tmp거꾸로
+		
+				if(tmp.equals(sb.toString())) {
+					isOk = false; //회문을 찾았다.
+					System.out.println("#" + t+ " " + tmp);
+				} 
 			}
-	}
+				if (isOk) {
+					System.out.println("#" + t+ " " + "NONE");
+				}
+		}
 
 	}
 }
