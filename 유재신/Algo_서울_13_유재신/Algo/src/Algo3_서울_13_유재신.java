@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Algo3_서울_13_유재신 {
+
+	static int [] dr = {-1, -1, -1, 0, 1, 1, 1, 0}; //좌상, 상, 우상, 우, 우하, 하, 좌하, 좌
+	static int [] dc = {-1, 0, 1, 1, 1, 0, -1, -1}; //좌상, 상, 우상, 우, 우하, 하, 좌하, 좌
+		
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int tc = sc.nextInt();
+		
+		for(int t = 1; t<=tc; t++) {
+			//배열 길이
+			int N = sc.nextInt();
+			int [][] arr = new int[N][N];
+			//중앙값 설정
+			int nowr = N/2;
+			int nowc = N/2;
+			
+			arr[nowr][nowc] = sc.nextInt();
+		}
+
+	}
+
+}

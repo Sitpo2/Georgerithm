@@ -10,7 +10,7 @@ public class Problem1 {
 		int Tc = sc.nextInt();
 		
 		for (int t = 1; t<=Tc; t++) {
-			String str = sc.next().toUpperCase();
+			String str = sc.next().toUpperCase(); // 대문자 만들기
 			
 			StringBuilder sb = new StringBuilder();
 			int cnt = 1;

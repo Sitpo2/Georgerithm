@@ -1,0 +1,10 @@
+1) 슈도코드
+ static hanoi(int n, char A, char B, char C) //n은 원반 수, A는 처음기둥, B는 중앙, C는 마지막
+ 
+ if(n==1)
+printf("%c -> %c\n), A, C) // 원반이 1개이면 A에서 C로 무조건 가게됨
+ 
+ if(n>1) 
+ hanoi(n-1, A, C, B) //원반이 1보다 크면 n-1개를 우선 보조기둥인 B로 C를 경유하여 보내야함
+printf("%c -> %c\n), A, C) // 가장 밑에 있는 원반을 A에서 C로 보냄
+ hanoi(n-1, B, A, C) // 마지막으로 보조기둥 B에 있는 n-1개의 원반들을 A를 활용하여 C로 보내야 함

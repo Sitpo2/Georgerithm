@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Algo1_서울_13_유재신 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int tc = sc.nextInt();
+		
+		for(int t = 1; t<=tc; t++) {
+			int cnt = 0;
+			int sum = 0;
+			String str = sc.nextLine();
+			
+			System.out.println(str);
+			
+			List<Character> list = new ArrayList<>();
+			
+			for(int i =0; i<str.length()-1; i++) {
+				if(str.charAt(i)==str.charAt(i+1))
+					cnt++;
+			} else if(str.charAt(i)<str.charAt(i+1)) {
+					System.out.print(str.charAt(i) + cnt);
+				}
+			}
+		}
+	
+	
+	
+		
+		
+
+	}
+}

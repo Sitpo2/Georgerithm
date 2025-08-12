@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class Algo2_서울_13_유재신 {
+
+	static int [] dr = {-1, -1, -1, 0, 1, 1, 1, 0}; //좌상, 상, 우상, 우, 우하, 하, 좌하, 좌
+	static int [] dc = {-1, 0, 1, 1, 1, 0, -1, -1}; //좌상, 상, 우상, 우, 우하, 하, 좌하, 좌
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		//테스트 케이스 첫줄 2
+		int tc = sc.nextInt();
+		
+		for(int t =1; t<=tc; t++) {
+			
+			//배열 길이
+			int N = sc.nextInt();
+			//중앙값보다 클 때 총합 구하기용
+			int sum = 0;
+
+			//다음에 올 값 정의
+			int nr = 0;
+			int nc = 0;
+			//배열 정의
+			int [][] arr = new int [N][N];
+			for(int r =0; r<N; r++) {
+				for (int c =0; c<N; c++) {
+					arr[r][c] = sc.nextInt();
+				}
+			}
+			// 중앙값에서 8방으로 뻗어서 자신보다 큰 값들이 8개이면 cnt를 더한다.
+			for(int r = 0; r<N; r++) {
+				for (int c = 0; c<N; c++) {
+					//중앙 보다 큰 값들 개수 세기
+					int cnt = 0;
+					//8방으로 움직이기
+					for(int d = 0; d<8; d++) {
+						nr = r + dr[d];
+						nc = r + dc[d];	
+						//범위내에 있을 때 사용
+						if(nr>=0 && nc>=0 && nr<N && nc<N && arr[r][c]<arr[nr][nc]) {
+								cnt++;						
+								if((nr<0 || nc<0 || nr>=N || nc>=N) && (arr[r][c]<arr[nr][nc])) {								
+										cnt++;
+								}																		
+							}										
+						}	
+					if(cnt == 8) {
+						sum++;
+					}							
+				}			
+			}
+			System.out.println("#" + t + " " + sum);
+		}			
+	}
+}
+
