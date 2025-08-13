@@ -31,8 +31,6 @@ public class SEWA_12712_파리퇴치3 {
 			}
 			
 			//합계 정하는 수 
-			int sum1 = 0;
-			int sum2 = 0;
 			int sum = 0;
 			
 			//십자가 숫자 찾기
@@ -49,8 +47,8 @@ public class SEWA_12712_파리퇴치3 {
 							}
 						}
 					}
-					if(tmp > sum1) {
-						sum1 = tmp;
+					if(tmp > sum) {
+						sum = tmp;
 					}
 				}
 			}
@@ -68,17 +66,12 @@ public class SEWA_12712_파리퇴치3 {
 							}
 						}
 					}
-					if(tmp > sum2) {
-						sum2 = tmp;
+					if(tmp > sum) {
+						sum = tmp;
 				}
 			}
 				
 				
-		}
-		if(sum1>sum2) {
-			sum = sum1;
-		} else {
-			sum = sum2;
 		}
 			
 		System.out.println("#" + t + " " + sum);
