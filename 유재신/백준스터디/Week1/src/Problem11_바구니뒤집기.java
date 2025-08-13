@@ -15,39 +15,45 @@ public class Problem11_바구니뒤집기 {
 		
 		//바구니 1, 2, 3, 4, 5 입력
 		for (int i = 0; i<N; i++) {
-			arr[i] = i+1; //arr[0] = 1 ~ arr[4] = 5
+			arr[i] = i+1; //arr[0] = 1= ~ arr[4] = 5
 		}
 		//순서 바꿔줄거야
-		for (int m = 0; m<M; m++) {
+		for (int m = 1; m<=M; m++) {
 			//바꿀 시작점
-			int i = sc.nextInt()-1;
+			int i = sc.nextInt()-1; //1 3 1 2 -> 0 2 0 1 
 			//도착점
-			int j = sc.nextInt()-1;
+			int j = sc.nextInt()-1; //2 4 4 2 -> 1 3 3 1
 			
 			//순서바꾸기
-			for(int r = i; r<=j-i-1; r++) {
-			int tmp = 0;
-			tmp = arr[i];
-			arr[r] = arr[j-i-r]; 
-			arr[j-i-r] = tmp;
+			
+			while(i<j) {
+				int tmp = 0;
+				tmp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = tmp;
+				i++;
+				j--;
+			}
+		}
+			
+//			for(int r = i; r<=(i+j)/2; r++) {
+//				int tmp = 0;
+//				tmp = arr[r];
+//				arr[r] = arr[N-j+i-1];
+//				arr[j-r] = tmp;
+				
+				
+				
+		for(int i = 0; i<N; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		
 			}
 			
+
+
 			
-			
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-			System.out.println(Arrays.toString(arr));
 		
 	}
 		
-}
-}
+
