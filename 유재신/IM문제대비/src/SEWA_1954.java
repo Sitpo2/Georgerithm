@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class SEWA_1954 {
@@ -8,48 +9,48 @@ public class SEWA_1954 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-	int tc = sc.nextInt(); // 테스트케이스 10
-
-	for(int t = 1; t<=tc; t++) {
-	
-	
-		int N = sc.nextInt();
-		int [][] arr = new int[N][N]; //t x t 2차배열 생성
+		int tc = sc.nextInt(); //테스트케이스
 		
-		//현재 값 입력
-		int nowr = 0;
-		int nowc = 0;
-		int d = 0; //방향걉
-		
-		for(int n = 1; n<=N*N; n++) {
-			//arr[0][0] = 1 초기값 설정
-			arr[nowr][nowc] = n;
+		for(int t = 1; t<=tc; t++) {
 			
-			int nextr = nowr + dr[d];
-			int nextc = nowc + dc[d];
+			int N = sc.nextInt(); // 길이 N인 배열생성			
+			int [][] arr = new int [N][N];
+						
+			int nowr = 0; //시작점 설정
+			int nowc = 0; //시작점 설정
+			int d = 0; //방향
 			
-			
-			if(nextr<0 || nextc<0 || nextr>=N || nextc>=N || arr[nextr][nextc] != 0) {
-				//벽을 만나거나 범위를 벗어나면
-				d = (d+1) % 4;
-			
-			nextr = nowr + dr[d];
-			nextc = nowc + dc[d];	
+			for(int n = 1; n<=N*N; n++) {
+				arr[nowr][nowc] = n; // arr[0][0] = 1부터 시작
+				
+				int nextr = nowr + dr[d]; //다음 좌표 정하기
+				int nextc = nowc + dc[d];
+				
+				//방향전환 조건
+				if(nextr < 0 || nextc < 0 || nextr>=N || nextc>=N || arr[nextr][nextc] !=0) {
+					d = (d+1) % 4;
+					nextr = nowr + dr[d];
+					nextc = nowc + dc[d];
+				}
+							
+				nowr = nextr;
+				nowc = nextc;
+				
+			}
+			System.out.println("#" + t);
+			for(int r = 0; r<N; r++) {
+				for(int c = 0; c<N; c++) {
+					System.out.print(arr[r][c] + " ");
+				}
+				System.out.println("");
 			}
 			
-			//값 다시 돌리기
-			nowr = nextr;
-			nowc = nextc;
+			
+			
+			
+			
+			
 		}
-		
-		System.out.println("#" + t);
-		for(int r = 0; r<N; r++) {
-			for(int c = 0; c<N; c++) {
-				System.out.print(arr[r][c] + " ");			
-			}
-			System.out.println(" ");
-		}		
-	}
 
  }
 		
