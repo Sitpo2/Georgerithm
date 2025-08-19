@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="Algo_서울_13_유재신/Algo/src"/>
+	<classpathentry kind="src" path="day01_0804/Solution/src"/>
+	<classpathentry kind="src" path="day02_0805/Solution/src"/>
+	<classpathentry kind="src" path="day03_0806/src"/>
+	<classpathentry kind="src" path="day04_0807/src"/>
+	<classpathentry kind="src" path="day05_0808/src"/>
+	<classpathentry kind="src" path="day06_0811/src"/>
+	<classpathentry kind="src" path="day07_0812/src"/>
+	<classpathentry kind="src" path="day09_0814/src"/>
+	<classpathentry kind="src" path="IM문제대비/src"/>
+	<classpathentry kind="src" path="TestPrepare/src"/>
+	<classpathentry kind="src" path="강의/src"/>
+	<classpathentry kind="src" path="백준스터디/Week1/src"/>
+	<classpathentry kind="src" path="시험문제/src"/>
+	<classpathentry kind="src" path="일타싸피/src"/>
+	<classpathentry kind="output" path="Algo_서울_13_유재신/Algo/bin"/>
+</classpath>

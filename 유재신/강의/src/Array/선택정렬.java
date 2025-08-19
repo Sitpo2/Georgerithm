@@ -1,0 +1,33 @@
+package Array;
+
+import java.util.Arrays;
+
+public class 선택정렬 {
+
+	public static void main(String[] args) {
+		int[] arr = new int[] {7, 3, 9, 10, 2, 1};
+		selectionSort(arr);
+		
+		System.out.println(Arrays.toString(arr));
+		
+	}
+
+		public static void selectionSort(int[] arr) {
+			int N = arr.length;
+			
+			for(int i =0; i<N-1; i++) {
+				int minIndex = i; //내가 현재 정렬하고 싶은 위치를 작은 값으로 생각한다.
+				for(int j = i+1; j<N; j++) {
+					//내가 가장 작다고 믿은 그 값이... j가 가리키는 값보다 더 커버린다면..
+					if(arr[minIndex] > arr[j])
+						minIndex = j; //몇번이든 일어날 수 있다.
+				}// 해당 for문 완료시 알 수 있는 것은? 
+				// 정렬되어 있지 않은 요소들 중 가장 작은 값의 index를 알고 있다.				
+				//swap 하자
+				int tmp = arr[i];
+				arr[i] = arr[minIndex];
+				arr[minIndex] = tmp;
+				
+			} //i 의미: N-1번 사이클만 돌면 된다. / 내가 정렬하고 싶은 위치
+		}
+}
